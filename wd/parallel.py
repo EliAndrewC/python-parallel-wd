@@ -69,6 +69,7 @@ def multiply(test):
 
     class SubTest(unittest.TestCase):
         def __init__(self, driver=None):
+            unittest.TestCase(self, '__init__')  # call with known method name to initialize properly
             self.driver = driver
             self.driver.implicitly_wait(30)
 
